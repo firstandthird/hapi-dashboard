@@ -12,7 +12,7 @@ Hapi plugin for displaying metrics on a dashboard
 
 ```js
 server.pack.register([
-  { plugin: require('hapi-upload-s3'), options: {
+  { plugin: require('hapi-dashboard'), options: {
     //defaults shown below
     endpoint: '/dashboard'
     dashboards: [],
