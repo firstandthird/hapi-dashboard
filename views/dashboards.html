@@ -3,9 +3,9 @@
   <title>Dashboard</title>
 </head>
 <body>
-  {{#if metrics}}
+  {{#if dashboards}}
     <ul>
-      {{#each metrics}}
+      {{#each dashboards}}
         <li><a href="{{../path}}/{{slug}}">{{name}}</a></li>
       {{/each}}
     </ul>

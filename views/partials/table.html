@@ -1,19 +1,16 @@
-<div class="metric">
-  <h2>{{name}}</h2>
+<div class="metrics">
   <table>
     <thead>
       <tr>
-        {{#each data.[0]}}
-        <th>{{@key}}</th>
-        {{/each}}
+        <th>Name</th>
+        <th>Value</th>
       </tr>
     </thead>
     <tbody>
-      {{#each data}}
+      {{#each this}}
         <tr>
-          {{#each this}}
-            <td>{{this}}</td>
-          {{/each}}
+          <td>{{name}}</td>
+          <td>{{data}}</td>
         </tr>
       {{/each}}
     </tbody>

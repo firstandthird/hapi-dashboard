@@ -9,45 +9,56 @@ server.pack.register([
     options: {
       endpoint: '/admin',
       dashboards: {
-        'test-accounts': {
-          name: 'Test accounts',
-          metrics: function(server, done) {
-            setTimeout(function() {
-              done(null, [
-                {
-                  username: 'admin',
-                  email: 'admin@example.com'
-                },
-                {
-                  username: 'qatest',
-                  email: 'qa@example.com'
-                }
-              ]);
-            }, 40);
+        'users': {
+          name: 'Users',
+          metrics: {
+            adminUsers: {
+              name: 'Admin Users',
+              value: function(server, done) {
+                setTimeout(function() {
+                  done(null, 12);
+                }, 40)
+              }
+            },
+            normalUsers: {
+              name: 'Normal Users',
+              value: function(server, done) {
+                setTimeout(function() {
+                  done(null, 2734);
+                }, 30);
+              }
+            },
+            bannedUsers: {
+              name: 'Banned Users',
+              value: function(server, done) {
+                setTimeout(function() {
+                  done(null, 1);
+                }, 70);
+              }
+            }
           }
         },
-        'registered-users': {
-          name: 'Registered Users',
-          metrics: function(server, done) {
-            setTimeout(function() {
-              done(null, [
-                {
-                  name: 'John Connor',
-                  age: 10,
-                  gender: 'male'
-                },
-                {
-                  name: 'Sarah Connor',
-                  age: 29,
-                  gender: 'female'
-                },
-                {
-                  name: 'The Terminator',
-                  age: 34,
-                  gender: 'cyborg'
-                }
-              ]);
-            }, 20);
+        'performance': {
+          name: 'Performance',
+          metrics: {
+            pageViews: {
+              name: 'Page Views',
+              value: function(server, done) {
+                setTimeout(function() {
+                  done(null, 87643245);
+                }, 40);
+              },
+              ttl: 0
+            },
+            bounceRate: {
+              name: 'Bounce Rate',
+              value: function(server, done) {
+                setTimeout(function() {
+                  done(null, '99%');
+                }, 30);
+              },
+              ttl: 0
+            }
           }
         }
       },
