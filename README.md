@@ -31,17 +31,18 @@ Dashboards object should look something like this:
 {
   'dashboard-1': {
     name: 'Dashboard 1',
-    metrics: [
-      function(server, done) {
-        //perform some async call
-        server.plugins.db.metrics.loggedInCount(function(err, result) {
-          done(null, {
-            name: 'Number of times a user logged in'
-            total: result.total
-          });
-        }
+    metrics: {
+      loggedIn: {
+        name: 'Number of times a user logged in',
+        value: function(server, done) {
+          //perform some async call
+          server.plugins.db.metrics.loggedInCount(function(err, result) {
+            done(null, result.total);
+          }
+        },
+        ttl: 60
       }
-    ]
+    }
   }
 }
 ```
