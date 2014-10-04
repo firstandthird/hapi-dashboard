@@ -15,20 +15,21 @@ server.pack.register([
   { plugin: require('hapi-dashboard'), options: {
     //defaults shown below
     endpoint: '/dashboard'
-    dashboards: [],
-    ttl: 60*1000 //time to cache responses. 60 seconds
+    dashboards: {},
+    ttl: 60*1000, //time to cache responses. 60 seconds
+    concurrent: 20 //max metrics to process at once
   }}
 ], function(err) {
 });
 ```
 
-## Dashboards Array
+## Dashboards Object
 
-Dashboards array should look something like this:
+Dashboards object should look something like this:
 
 ```js
-[
-  { 
+{
+  'dashboard-1': {
     name: 'Dashboard 1',
     metrics: [
       function(server, done) {
@@ -42,5 +43,5 @@ Dashboards array should look something like this:
       }
     ]
   }
-]
+}
 ```

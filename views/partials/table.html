@@ -1,0 +1,21 @@
+<div class="metric">
+  <h2>{{name}}</h2>
+  <table>
+    <thead>
+      <tr>
+        {{#each data.[0]}}
+        <th>{{@key}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+        <tr>
+          {{#each this}}
+            <td>{{this}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
