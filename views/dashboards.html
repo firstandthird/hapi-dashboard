@@ -1,8 +1,12 @@
 <html>
 <head>
   <title>Dashboard</title>
+  {{#each cssFiles}}
+    <link rel="stylesheet" href="{{this}}"/>
+  {{/each}}
 </head>
-<body>
+<body class="dashboards">
+  <h1>Dashboards</h1>
   {{#if dashboards}}
     <ul>
       {{#each dashboards}}
