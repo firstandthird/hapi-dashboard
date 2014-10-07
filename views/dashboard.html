@@ -1,9 +1,13 @@
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>{{dashboard.name}}</title>
+  {{#each cssFiles}}
+    <link rel="stylesheet" href="{{this}}"/>
+  {{/each}}
 </head>
-<body>
+<body class="dashboard">
   <h1>{{dashboard.name}}</h1>
+  <a class="view-all" href="{{endpoint}}">View All Dashboards</a>
   {{#with metrics}}
     {{> table}}
   {{/with}}
