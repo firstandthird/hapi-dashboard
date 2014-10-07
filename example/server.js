@@ -13,26 +13,32 @@ server.pack.register([
           name: 'Users',
           metrics: {
             adminUsers: {
-              name: 'Admin Users',
               value: function(server, done) {
                 setTimeout(function() {
-                  done(null, 12);
+                  done(null, {
+                    name: 'Admin Users',
+                    value: 12
+                  });
                 }, 40)
               }
             },
             normalUsers: {
-              name: 'Normal Users',
               value: function(server, done) {
                 setTimeout(function() {
-                  done(null, 2734);
+                  done(null, {
+                    name: 'Normal Users',
+                    value: 2734
+                  });
                 }, 30);
               }
             },
             bannedUsers: {
-              name: 'Banned Users',
               value: function(server, done) {
                 setTimeout(function() {
-                  done(null, 1);
+                  done(null, {
+                    name: 'Banned Users',
+                    value: 1
+                  });
                 }, 70);
               }
             }
@@ -42,22 +48,64 @@ server.pack.register([
           name: 'Performance',
           metrics: {
             pageViews: {
-              name: 'Page Views',
               value: function(server, done) {
                 setTimeout(function() {
-                  done(null, 87643245);
+                  done(null, {
+                    name: 'Page Views',
+                    value: 87643245
+                  });
                 }, 40);
               },
               ttl: 0
             },
             bounceRate: {
-              name: 'Bounce Rate',
               value: function(server, done) {
                 setTimeout(function() {
-                  done(null, '99%');
+                  done(null, {
+                    name: 'Bounce Rate',
+                    value: '99%'
+                  });
                 }, 30);
               },
               ttl: 0
+            }
+          }
+        },
+        'errors': {
+          name: 'App Errors',
+          metrics: {
+            appErrors: {
+              value: function(server, done) {
+                done(null, [
+                {
+                  name: 'Internal Errors',
+                  value: 1234
+                },
+                {
+                  name: 'Email Errors',
+                  value: 1234
+                }
+                ]);
+              }
+            }
+          }
+        },
+        'randomdata': {
+          name: 'Random Data',
+          metrics: {
+            something: {
+              value: function(server, done) {
+                done(null, [{
+                  ' ': 'cat',
+                  'before': '<img src="http://placekitten.com/g/200/300">',
+                  'after': '<img src="http://placekitten.com/g/50/50">'
+                },
+                {
+                  ' ': 'meat',
+                  'before': '<img src="http://baconmockup.com/300/200">',
+                  'after': '<img src="http://baconmockup.com/50/50">'
+                }]);
+              }
             }
           }
         }

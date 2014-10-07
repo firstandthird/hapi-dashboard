@@ -2,15 +2,17 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Value</th>
+        {{#each this.[0]}}
+          <th>{{@key}}</th>
+        {{/each}}
       </tr>
     </thead>
     <tbody>
       {{#each this}}
         <tr>
-          <td>{{name}}</td>
-          <td>{{data}}</td>
+          {{#each this}}
+            <td>{{{this}}}</td>
+          {{/each}}
         </tr>
       {{/each}}
     </tbody>
