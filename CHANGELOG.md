@@ -1,4 +1,9 @@
 
+0.1.0 / 2014-10-07 
+==================
+
+  * Supports html, custom columns, array of metric data
+
 0.0.2 / 2014-10-06 
 ==================
 
