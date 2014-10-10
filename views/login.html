@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <form action="{{path}}/login?next={{next}}" method="post">
+    {{#if error}}
+      <p class="error">Invalid Password</p>
+    {{/if}}
+    <label for="password">Password:</label>
+    <input type="password" name="password"/>
+    <input type="submit" value="Sign In"/>
+  </form>
+</body>
+</html>

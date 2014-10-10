@@ -17,7 +17,8 @@ server.pack.register([
     endpoint: '/dashboard'
     dashboards: {},
     ttl: 60*1000, //time to cache responses. 60 seconds
-    concurrent: 20 //max metrics to process at once
+    concurrent: 20, //max metrics to process at once
+    password: 'something' //password used to access dashboards
   }}
 ], function(err) {
 });

@@ -4,6 +4,7 @@ var server = new Hapi.Server(port, '0.0.0.0');
 var fs = require('fs');
 
 server.pack.register([
+  require('hapi-auth-cookie'),
   {
     plugin: require('../'),
     options: {
@@ -116,6 +117,16 @@ server.pack.register([
   if (err) {
     throw err;
   }
+
+  server.route([
+    {
+      method: 'GET',
+      path: '/',
+      handler: function(request, reply) {
+        reply('/admin for dashboard')
+      }
+    }
+  ]);
 
   server.start(function() {
     console.log('Hapi server started @', server.info.uri);
