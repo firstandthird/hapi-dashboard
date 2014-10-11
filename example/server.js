@@ -4,11 +4,11 @@ var server = new Hapi.Server(port, '0.0.0.0');
 var fs = require('fs');
 
 server.pack.register([
-  require('hapi-auth-cookie'),
   {
     plugin: require('../'),
     options: {
       endpoint: '/admin',
+      password: 'admin1234',
       dashboards: {
         'users': {
           name: 'Users',

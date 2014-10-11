@@ -11,7 +11,6 @@
   "dependencies": {
     "async": "^0.9.0",
     "handlebars": "^2.0.0",
-    "hapi-auth-cookie": "^1.3.2",
     "hoek": "^2.5.0",
     "joi": "^4.7.0"
   },
