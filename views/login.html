@@ -1,9 +1,12 @@
 <html>
 <head>
   <title>Login</title>
+  {{#each cssFiles}}
+    <link rel="stylesheet" href="{{this}}"/>
+  {{/each}}
 </head>
 <body>
-  <form action="{{path}}/login?next={{next}}" method="post">
+  <form action="{{path}}/login" method="post">
     {{#if error}}
       <p class="error">Invalid Password</p>
     {{/if}}
