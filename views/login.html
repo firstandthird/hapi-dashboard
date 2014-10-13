@@ -5,6 +5,10 @@
   {{#each cssFiles}}
     <link rel="stylesheet" href="{{this}}"/>
   {{/each}}
+  {{#if favicon}}
+    <link rel="apple-touch-icon-precomposed" href="{{favicon}}">
+    <link rel="icon" href="{{favicon}}">
+  {{/if}}
 </head>
 <body>
   <form action="{{path}}/login" method="post">
