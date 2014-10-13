@@ -7,6 +7,7 @@ server.pack.register([
   {
     plugin: require('../'),
     options: {
+      favicon: 'http://placekitten.com/g/152/152',
       endpoint: '/admin',
       dashboards: {
         'users': {
