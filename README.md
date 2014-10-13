@@ -18,7 +18,8 @@ server.pack.register([
     dashboards: {},
     ttl: 60*1000, //time to cache responses. 60 seconds
     concurrent: 20, //max metrics to process at once
-    favicon: 'favicon.png' // Also used as home screen icon for ios
+    password: 'something', //password used to access dashboards
+	favicon: 'favicon.png' // Also used as home screen icon for ios
   }}
 ], function(err) {
 });

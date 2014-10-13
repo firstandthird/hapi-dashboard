@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>{{dashboard.name}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {{#each cssFiles}}
     <link rel="stylesheet" href="{{this}}"/>
   {{/each}}
@@ -11,7 +12,7 @@
 </head>
 <body class="dashboard">
   <h1>{{dashboard.name}}</h1>
-  <a class="view-all" href="{{endpoint}}">View All Dashboards</a>
+  <a class="view-all" href="{{path}}">View All Dashboards</a>
   {{#with metrics}}
     {{> table}}
   {{/with}}
