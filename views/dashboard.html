@@ -8,7 +8,7 @@
 </head>
 <body class="dashboard">
   <h1>{{dashboard.name}}</h1>
-  <a class="view-all" href="{{path}}">View All Dashboards</a>
+  <a class="view-all" href="{{endpoint}}">View All Dashboards</a>
   {{#with metrics}}
     {{> table}}
   {{/with}}
