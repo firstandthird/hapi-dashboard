@@ -19,5 +19,9 @@
     <input type="password" name="password"/>
     <input type="submit" value="Sign In"/>
   </form>
+
+  {{#each jsFiles}}
+    <script src="{{this}}"></script>
+  {{/each}}
 </body>
 </html>

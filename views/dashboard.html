@@ -16,5 +16,9 @@
   {{#with metrics}}
     {{> table}}
   {{/with}}
+
+  {{#each jsFiles}}
+    <script src="{{this}}"></script>
+  {{/each}}
 </body>
 </html>
