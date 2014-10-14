@@ -1,4 +1,15 @@
 
+0.2.0 / 2014-10-14 
+==================
+
+  * Allow querystring auth
+  * Added csv and json exporters
+  * Added scripts to pages
+  * Added favicon support
+  * Added viewport tags and fixed all dashboards link
+  * Added css support to login form
+  * Basic password protection
+
 0.1.0 / 2014-10-07 
 ==================
 
