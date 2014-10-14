@@ -2,12 +2,12 @@
 <head>
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{#each cssFiles}}
+  {{#each options.cssFiles}}
     <link rel="stylesheet" href="{{this}}"/>
   {{/each}}
-  {{#if favicon}}
-    <link rel="apple-touch-icon-precomposed" href="{{favicon}}">
-    <link rel="icon" href="{{favicon}}">
+  {{#if options.favicon}}
+    <link rel="apple-touch-icon-precomposed" href="{{options.favicon}}">
+    <link rel="icon" href="{{options.favicon}}">
   {{/if}}
 </head>
 <body class="dashboards">
@@ -20,7 +20,7 @@
     </ul>
   {{/if}}
 
-  {{#each jsFiles}}
+  {{#each options.jsFiles}}
     <script src="{{this}}"></script>
   {{/each}}
 </body>
