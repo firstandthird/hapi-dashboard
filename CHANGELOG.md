@@ -1,4 +1,10 @@
 
+0.3.0 / 2014-10-14 
+==================
+
+  * default to no password.  fixes #22
+  * removed plugin.ext and replaced with passing in options to view
+
 0.2.0 / 2014-10-14 
 ==================
 
