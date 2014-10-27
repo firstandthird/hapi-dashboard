@@ -5,11 +5,19 @@ var fs = require('fs');
 
 server.pack.register([
   {
+    plugin: require('hapi-password')
+  },
+  {
     plugin: require('../'),
     options: {
       favicon: 'http://placekitten.com/g/152/152',
       endpoint: '/admin',
-      password: 'admin1234',
+      auth: 'hapi-password',
+      authConfig: {
+        password: 'password',
+        cookieName: 'demo-login',
+        loginRoute: '/auth'
+      },
       dashboards: {
         'users': {
           name: 'Users',
