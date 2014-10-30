@@ -13,9 +13,9 @@
 <body class="dashboard">
   <h1>{{dashboard.name}}</h1>
   <a class="view-all" href="{{options.endpoint}}">View All Dashboards</a>
-  {{#with metrics}}
+  {{#each metrics}}
     {{> table}}
-  {{/with}}
+  {{/each}}
 
   {{#each options.jsFiles}}
     <script src="{{this}}"></script>

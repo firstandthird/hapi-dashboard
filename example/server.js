@@ -15,6 +15,7 @@ server.pack.register([
           name: 'Users',
           metrics: {
             adminUsers: {
+              section: 'Admin',
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
@@ -25,6 +26,7 @@ server.pack.register([
               }
             },
             normalUsers: {
+              section: 'User',
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
@@ -35,6 +37,7 @@ server.pack.register([
               }
             },
             bannedUsers: {
+              section: 'User',
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
