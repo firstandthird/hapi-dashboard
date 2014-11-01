@@ -18,7 +18,7 @@ server.pack.register([
     plugin: require('../'),
     options: {
       favicon: 'http://placekitten.com/g/152/152',
-      endpoint: '/admin',
+      endpoint: '/',
       auth: 'password',
       dashboards: {
         'users': {
@@ -129,15 +129,15 @@ server.pack.register([
     throw err;
   }
 
-  server.route([
-    {
-      method: 'GET',
-      path: '/',
-      handler: function(request, reply) {
-        reply('/admin for dashboard')
-      }
-    }
-  ]);
+  // server.route([
+  //   {
+  //     method: 'GET',
+  //     path: '/',
+  //     handler: function(request, reply) {
+  //       reply('/admin for dashboard')
+  //     }
+  //   }
+  // ]);
 
   server.start(function() {
     console.log('Hapi server started @', server.info.uri);
