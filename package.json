@@ -16,7 +16,7 @@
     "json2csv": "^2.2.1"
   },
   "devDependencies": {
-    "hapi": "^6.10.0",
-    "hapi-password": "https://github.com/firstandthird/hapi-password/tarball/master"
+    "hapi": "^7.2.0",
+    "hapi-password": "0.0.1"
   }
 }

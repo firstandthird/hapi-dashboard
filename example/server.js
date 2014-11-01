@@ -6,7 +6,7 @@ var fs = require('fs');
 server.pack.register({
   plugin: require('hapi-password')
 }, function() {
-  server.auth.strategy('password', 'hapi-password', 'try', {
+  server.auth.strategy('password', 'password', 'try', {
     password: 'password',
     cookieName: 'demo-login',
     loginRoute: '/auth'
