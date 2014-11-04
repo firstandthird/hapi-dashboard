@@ -1,4 +1,9 @@
 
+0.4.1 / 2014-11-04 
+==================
+
+  * fixed auth strategy defaults to allow null to work
+
 0.4.0 / 2014-11-04 
 ==================
 
