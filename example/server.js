@@ -19,7 +19,6 @@ server.pack.register([
     options: {
       favicon: 'http://placekitten.com/g/152/152',
       endpoint: '/',
-      auth: 'password',
       dashboards: {
         'users': {
           name: 'Users',
