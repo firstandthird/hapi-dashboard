@@ -1,4 +1,13 @@
 
+0.4.0 / 2014-11-04 
+==================
+
+  * Added ability to group metrics
+  * Defaults expiresIn to undefined.
+  * Allows root endpoint to be set.
+  * Setup auth in server rather than plugin.
+  * Removed old authentication - added support for auth strategies.
+
 0.3.0 / 2014-10-14 
 ==================
 
