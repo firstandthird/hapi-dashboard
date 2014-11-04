@@ -1,4 +1,7 @@
 <div class="metrics">
+  {{#notequal @key 'default'}}
+    <h3>{{@key}}</h3>
+  {{/notequal}}
   <table>
     <thead>
       <tr>
