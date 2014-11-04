@@ -16,6 +16,7 @@
     "json2csv": "^2.2.1"
   },
   "devDependencies": {
-    "hapi": "^7.1.1"
+    "hapi": "^7.2.0",
+    "hapi-password": "0.0.1"
   }
 }

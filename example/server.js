@@ -3,13 +3,23 @@ var port = process.env.PORT || 8080;
 var server = new Hapi.Server(port, '0.0.0.0');
 var fs = require('fs');
 
+server.pack.register({
+  plugin: require('hapi-password')
+}, function() {
+  server.auth.strategy('password', 'password', 'try', {
+    password: 'password',
+    cookieName: 'demo-login',
+    loginRoute: '/auth'
+  });
+});
+
 server.pack.register([
   {
     plugin: require('../'),
     options: {
       favicon: 'http://placekitten.com/g/152/152',
-      endpoint: '/admin',
-      password: 'admin1234',
+      endpoint: '/',
+      auth: 'password',
       dashboards: {
         'users': {
           name: 'Users',
@@ -122,15 +132,15 @@ server.pack.register([
     throw err;
   }
 
-  server.route([
-    {
-      method: 'GET',
-      path: '/',
-      handler: function(request, reply) {
-        reply('/admin for dashboard')
-      }
-    }
-  ]);
+  // server.route([
+  //   {
+  //     method: 'GET',
+  //     path: '/',
+  //     handler: function(request, reply) {
+  //       reply('/admin for dashboard')
+  //     }
+  //   }
+  // ]);
 
   server.start(function() {
     console.log('Hapi server started @', server.info.uri);
