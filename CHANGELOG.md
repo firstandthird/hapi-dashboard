@@ -1,4 +1,10 @@
 
+0.5.0 / 2014-11-21 
+==================
+
+  * Merge pull request #33 from firstandthird/feature/request-this
+  * Added request object to `this` in value function.
+
 0.4.1 / 2014-11-04 
 ==================
 
