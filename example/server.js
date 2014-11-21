@@ -122,6 +122,16 @@ server.pack.register([
               }
             }
           }
+        },
+        'requeststuff': {
+          name: 'Request Stuffs',
+          metrics: {
+            request: {
+              value: function(server, done) {
+                done(null, [this.headers]);
+              }
+            }
+          }
         }
       },
     }
