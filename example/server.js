@@ -132,6 +132,46 @@ server.pack.register([
               }
             }
           }
+        },
+        'daily': {
+          name: 'Daily',
+          metrics: {
+            daily: {
+              value: function(server, done) {
+                done(null, [
+                {
+                  name: 'Search',
+                  data: [
+                    {
+                      name: '01/05/15',
+                      value: 3
+                    },
+                    {
+                      name: '01/04/15',
+                      value: 1
+                    },
+                    {
+                      name: '01/03/15',
+                      value: 18
+                    },
+                    {
+                      name: '01/02/15',
+                      value: 5
+                    },
+                    {
+                      name: '01/01/15',
+                      value: 1
+                    },
+                    {
+                      name: '12/31/14',
+                      value: 764
+                    }
+                  ]
+                }
+                ]);
+              }
+            }
+          }
         }
       },
     }
