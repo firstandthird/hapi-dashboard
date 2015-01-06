@@ -1,4 +1,11 @@
 
+0.6.0 / 2015-01-05
+==================
+
+  * Merge pull request #34 from firstandthird/feature/allow-array
+  * Normalize data to array.
+  * Allows data to be ordered in an array
+
 0.5.0 / 2014-11-21 
 ==================
 
