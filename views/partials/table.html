@@ -5,31 +5,19 @@
   <table>
     <thead>
       <tr>
-        {{#if this.[0].data}}
-          <th>Name</th>
-          {{#each this.[0].data}}
-            <th>{{name}}</th>
-          {{/each}}
-        {{else}}
-          {{#each this.[0]}}
-            <th>{{@key}}</th>
-          {{/each}}
-        {{/if}}
+        <th>Name</th>
+        {{#each this.[0].data}}
+          <th>{{name}}</th>
+        {{/each}}
       </tr>
     </thead>
     <tbody>
       {{#each this}}
         <tr>
-          {{#if data}}
-            <td>{{name}}</td>
-            {{#each data}}
-              <td>{{{value}}}</td>
-            {{/each}}
-          {{else}}
-            {{#each this}}
-              <td>{{{this}}}</td>
-            {{/each}}
-          {{/if}}
+          <td>{{name}}</td>
+          {{#each data}}
+            <td>{{{value}}}</td>
+          {{/each}}
         </tr>
       {{/each}}
     </tbody>
