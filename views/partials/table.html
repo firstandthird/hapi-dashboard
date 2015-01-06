@@ -5,16 +5,18 @@
   <table>
     <thead>
       <tr>
-        {{#each this.[0]}}
-          <th>{{@key}}</th>
+        <th>Name</th>
+        {{#each this.[0].data}}
+          <th>{{name}}</th>
         {{/each}}
       </tr>
     </thead>
     <tbody>
       {{#each this}}
         <tr>
-          {{#each this}}
-            <td>{{{this}}}</td>
+          <td>{{name}}</td>
+          {{#each data}}
+            <td>{{{value}}}</td>
           {{/each}}
         </tr>
       {{/each}}
