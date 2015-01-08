@@ -1,4 +1,10 @@
 
+0.6.1 / 2015-01-07
+==================
+
+  * Merge pull request #36 from firstandthird/bug/csv-export
+  * Cleaned up normalize code and fixed csv export.
+
 0.6.0 / 2015-01-05
 ==================
 
