@@ -13,7 +13,8 @@
     "handlebars": "^2.0.0",
     "hoek": "^2.5.0",
     "joi": "^4.7.0",
-    "json2csv": "^2.2.1"
+    "json2csv": "^2.2.1",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "hapi": "^7.2.0",
