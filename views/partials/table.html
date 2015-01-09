@@ -5,7 +5,9 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
+        {{#if this.[0].name}}
+          <th>Name</th>
+        {{/if}}
         {{#each this.[0].data}}
           <th>{{name}}</th>
         {{/each}}
@@ -14,7 +16,9 @@
     <tbody>
       {{#each this}}
         <tr>
-          <td>{{name}}</td>
+          {{#if name}}
+            <td>{{name}}</td>
+          {{/if}}
           {{#each data}}
             <td>{{{value}}}</td>
           {{/each}}

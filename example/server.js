@@ -28,8 +28,8 @@ server.pack.register([
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
-                    name: 'Admin Users',
-                    value: 12
+                    Name: 'Admin Users',
+                    Total: 12
                   });
                 }, 40)
               }
@@ -39,8 +39,8 @@ server.pack.register([
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
-                    name: 'Normal Users',
-                    value: 2734
+                    Name: 'Normal Users',
+                    Total: 2734
                   });
                 }, 30);
               }
@@ -50,8 +50,8 @@ server.pack.register([
               value: function(server, done) {
                 setTimeout(function() {
                   done(null, {
-                    name: 'Banned Users',
-                    value: 1
+                    Name: 'Banned Users',
+                    Total: 1
                   });
                 }, 70);
               }
@@ -66,7 +66,7 @@ server.pack.register([
                 setTimeout(function() {
                   done(null, {
                     name: 'Page Views',
-                    value: 87643245
+                    Total: 87643245
                   });
                 }, 40);
               },
@@ -77,7 +77,7 @@ server.pack.register([
                 setTimeout(function() {
                   done(null, {
                     name: 'Bounce Rate',
-                    value: '99%'
+                    Total: '99%'
                   });
                 }, 30);
               },
