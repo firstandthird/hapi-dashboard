@@ -1,4 +1,10 @@
 
+0.6.2 / 2015-01-09
+==================
+
+  * Merge pull request #37 from firstandthird/bug/backwards-compat
+  * Fixed backwards compatibility
+
 0.6.1 / 2015-01-07
 ==================
 
