@@ -1,27 +1,28 @@
 
+0.6.3 / 2015-01-23 
+==================
+
+  * fix for csv output
+
 0.6.2 / 2015-01-09
 ==================
 
-  * Merge pull request #37 from firstandthird/bug/backwards-compat
   * Fixed backwards compatibility
 
 0.6.1 / 2015-01-07
 ==================
 
-  * Merge pull request #36 from firstandthird/bug/csv-export
   * Cleaned up normalize code and fixed csv export.
 
 0.6.0 / 2015-01-05
 ==================
 
-  * Merge pull request #34 from firstandthird/feature/allow-array
   * Normalize data to array.
   * Allows data to be ordered in an array
 
 0.5.0 / 2014-11-21 
 ==================
 
-  * Merge pull request #33 from firstandthird/feature/request-this
   * Added request object to `this` in value function.
 
 0.4.1 / 2014-11-04 
