@@ -1,4 +1,12 @@
 
+0.7.0 / 2015-07-07
+==================
+
+  * log when fetching data
+  * use exports name as key
+  * if undefined, set to '' in csv
+  * added charset utf8 on views
+
 0.6.3 / 2015-01-23 
 ==================
 
