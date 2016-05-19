@@ -3,21 +3,34 @@
   "description": "Hapi plugin for displaying metrics on a dashboard",
   "homepage": "https://github.com/firstandthird/hapi-dashboard",
   "author": "First+Third",
-  "version": "0.7.2",
+  "version": "1.0.0",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/firstandthird/hapi-dashboard.git"
   },
+  "scripts": {
+    "start": "nodemon example/server.js"
+  },
   "dependencies": {
-    "async": "^0.9.0",
-    "handlebars": "^2.0.0",
-    "hoek": "^2.5.0",
-    "joi": "^4.7.0",
-    "json2csv": "^2.2.1",
-    "lodash": "^2.4.1"
+    "async": "^2.0.0-rc.5",
+    "boom": "^3.1.3",
+    "handlebars": "^4.0.5",
+    "hoek": "^4.0.0",
+    "joi": "^8.1.0",
+    "json2csv": "^3.4.1",
+    "lodash": "^4.12.0"
   },
   "devDependencies": {
-    "hapi": "^7.2.0",
-    "hapi-password": "0.0.1"
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-config-firstandthird": "^2.0.0",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "hapi": "^13.4.0",
+    "hapi-password": "^0.5.0",
+    "nodemon": "^1.9.2",
+    "vision": "^4.1.0"
   }
 }
