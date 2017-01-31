@@ -3,7 +3,7 @@
   "description": "Hapi plugin for displaying metrics on a dashboard",
   "homepage": "https://github.com/firstandthird/hapi-dashboard",
   "author": "First+Third",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
