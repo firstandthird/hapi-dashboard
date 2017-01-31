@@ -3,9 +3,16 @@
 'use strict';
 
 const Hapi = require('hapi');
-const server = new Hapi.Server();
+const server = new Hapi.Server({
+  debug: {
+    request: ['*'],
+    log: ['hapi-dashboard']
+  }
+});
 
-server.connection({ port: 3000 });
+server.connection({
+  port: 8000,
+});
 
 const dashboardOptions = {
   favicon: 'http://placekitten.com/g/152/152',
