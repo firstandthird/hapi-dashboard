@@ -3,7 +3,8 @@ module.exports = {
     const start = new Date().getTime();
     metric.value.call(request, request.server, (err, data) => {
       if (err) {
-        return request.server.log(['hapi-dashboard', 'error'], { message: err });
+        request.server.log(['hapi-dashboard', 'error'], { key: metric.key, message: err });
+        return done(null, []);
       }
       const end = new Date().getTime();
       const diff = (end - start) / 1000;
