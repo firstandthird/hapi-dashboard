@@ -15,7 +15,7 @@ module.exports = {
   },
   options: {
     cache: {
-      expiresIn: undefined,
+      expiresIn: 1000 * 60,
       generateTimeout: 5 * 1000
     },
     generateKey(request, metric) {
