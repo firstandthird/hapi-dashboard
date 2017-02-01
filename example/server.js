@@ -179,7 +179,6 @@ const dashboardOptions = {
 
 server.register([
   require('vision'),
-  require('hapi-password'),
   {
     register: require('../'),
     options: dashboardOptions
@@ -188,13 +187,6 @@ server.register([
   if (err) {
     console.error(err);
   }
-
-  server.auth.strategy('password', 'password', 'try', {
-    password: 'password',
-    salt: 'here is a salt',
-    cookieName: 'demo-login',
-    loginRoute: '/auth'
-  });
 
   server.start(() => {
     console.log('Server started at:', server.info.uri);
