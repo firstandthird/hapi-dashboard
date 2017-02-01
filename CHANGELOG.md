@@ -1,4 +1,11 @@
 
+1.2.1 / 2017-01-31
+==================
+
+  * removed hapi-password from example
+  * fixed caching
+  * updated deps
+
 1.2.0 / 2017-01-31
 ==================
 
