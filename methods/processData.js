@@ -13,11 +13,13 @@ module.exports = {
       done(null, metric, metric.ttl || options.ttl);
     });
   },
-  cache: {
-    expiresIn: undefined,
-    generateTimeout: 30 * 1000
-  },
-  generateKey(request, metric) {
-    return metric.key;
+  options: {
+    cache: {
+      expiresIn: undefined,
+      generateTimeout: 5 * 1000
+    },
+    generateKey(request, metric) {
+      return metric.key;
+    }
   }
 };

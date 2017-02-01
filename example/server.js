@@ -17,6 +17,7 @@ server.connection({
 const dashboardOptions = {
   favicon: 'http://placekitten.com/g/152/152',
   endpoint: '/',
+  ttl: 10 * 1000,
   dashboards: {
     users: {
       name: 'Users',
@@ -29,7 +30,7 @@ const dashboardOptions = {
                 Name: 'Admin Users',
                 Total: 12
               });
-            }, 40);
+            }, 1000);
           }
         },
         normalUsers: {
