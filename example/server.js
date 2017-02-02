@@ -17,7 +17,12 @@ server.connection({
 const dashboardOptions = {
   favicon: 'http://placekitten.com/g/152/152',
   endpoint: '/',
-  ttl: 10 * 1000,
+  cache: {
+    expiresIn: 1000 * 60,
+    staleIn: 1000,
+    staleTimeout: 10,
+    generateTimeout: 5 * 1000
+  },
   dashboards: {
     users: {
       name: 'Users',

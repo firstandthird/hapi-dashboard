@@ -14,9 +14,15 @@ module.exports = {
     });
   },
   options: {
-    cache: {
-      expiresIn: 1000 * 60,
-      generateTimeout: 5 * 1000
+    cache(server, options) {
+      const dashboardOptions = server.plugins['hapi-dashboard'].options;
+      if (dashboardOptions.cache) {
+        return dashboardOptions.cache;
+      }
+      return {
+        expiresIn: dashboardOptions.ttl || 1,
+        generateTimeout: 5 * 1000
+      };
     },
     generateKey(request, metric) {
       return metric.key;
