@@ -1,4 +1,10 @@
 
+1.3.0 / 2017-02-02
+==================
+
+  * allow for more complex caching
+  * chore(package): update dependencies
+
 1.2.3 / 2017-01-31
 ==================
 
