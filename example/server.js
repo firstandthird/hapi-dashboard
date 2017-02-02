@@ -3,13 +3,21 @@
 'use strict';
 
 const Hapi = require('hapi');
-const server = new Hapi.Server();
+const server = new Hapi.Server({
+  debug: {
+    request: ['*'],
+    log: ['hapi-dashboard']
+  }
+});
 
-server.connection({ port: 3000 });
+server.connection({
+  port: 8000,
+});
 
 const dashboardOptions = {
   favicon: 'http://placekitten.com/g/152/152',
   endpoint: '/',
+  ttl: 10 * 1000,
   dashboards: {
     users: {
       name: 'Users',
@@ -22,7 +30,7 @@ const dashboardOptions = {
                 Name: 'Admin Users',
                 Total: 12
               });
-            }, 40);
+            }, 1000);
           }
         },
         normalUsers: {
@@ -171,7 +179,6 @@ const dashboardOptions = {
 
 server.register([
   require('vision'),
-  require('hapi-password'),
   {
     register: require('../'),
     options: dashboardOptions
@@ -180,13 +187,6 @@ server.register([
   if (err) {
     console.error(err);
   }
-
-  server.auth.strategy('password', 'password', 'try', {
-    password: 'password',
-    salt: 'here is a salt',
-    cookieName: 'demo-login',
-    loginRoute: '/auth'
-  });
 
   server.start(() => {
     console.log('Server started at:', server.info.uri);

@@ -1,3 +1,32 @@
+
+1.2.3 / 2017-01-31
+==================
+
+  * set method loader to not be verbose
+
+1.2.2 / 2017-01-31
+==================
+
+  * set default expiresIn
+
+1.2.1 / 2017-01-31
+==================
+
+  * removed hapi-password from example
+  * fixed caching
+  * updated deps
+
+1.2.0 / 2017-01-31
+==================
+
+  * continue if error
+
+1.1.0 / 2017-01-31
+==================
+
+  * log in example
+  * output duration in log
+
 1.0.0 / 2016-12-19
 ==================
 
