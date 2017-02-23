@@ -16,7 +16,7 @@
     "async": "2.1.4",
     "boom": "4.2.0",
     "handlebars": "4.0.6",
-    "hapi-method-loader": "^1.2.0",
+    "hapi-method-loader": "^1.3.0",
     "hoek": "4.1.0",
     "joi": "^10.2.1",
     "json2csv": "3.7.3",
