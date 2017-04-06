@@ -5,8 +5,8 @@ const Joi = require('joi');
 const Handlebars = require('handlebars');
 const path = require('path');
 const methodLoader = require('hapi-method-loader').methodLoader;
-const listAllDashboardsRouteHandler = require('../routes/dashboards.js');
-const showDashboardRouteHandler = require('../routes/dashboard.js');
+const listAllDashboardsRouteHandler = require('./routes/dashboards.js');
+const showDashboardRouteHandler = require('./routes/dashboard.js');
 
 module.exports = function(plugin, options, next) {
   options = Hoek.applyToDefaults({
@@ -23,7 +23,7 @@ module.exports = function(plugin, options, next) {
 
   methodLoader(plugin, {
     verbose: false,
-    path: `${__dirname}/../methods`,
+    path: `${__dirname}/methods`,
   },
   () => {
     plugin.bind({
@@ -37,9 +37,9 @@ module.exports = function(plugin, options, next) {
           module: Handlebars.create()
         }
       },
-      path: path.resolve(__dirname, '../views'),
-      partialsPath: path.resolve(__dirname, '../views/partials'),
-      helpersPath: path.resolve(__dirname, '../views/helpers')
+      path: path.resolve(__dirname, './views'),
+      partialsPath: path.resolve(__dirname, './views/partials'),
+      helpersPath: path.resolve(__dirname, './views/helpers')
     });
 
     let authConfig = null;
@@ -79,5 +79,5 @@ module.exports = function(plugin, options, next) {
 
 module.exports.attributes = {
   name: 'hapi-dashboard',
-  pkg: require('../package.json')
+  pkg: require('./package.json')
 };

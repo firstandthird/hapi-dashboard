@@ -20,7 +20,6 @@ tap.afterEach((done) => {
   });
 });
 tap.test('can configure and call the dashboards menu endpoint', (t) => {
-  t.plan(2);
   server.inject({
     url: '/',
     method: 'GET'

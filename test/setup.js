@@ -179,7 +179,7 @@ module.exports = (options, allDone) => {
   server.register([
     require('vision'),
     {
-      register: require('../'),
+      register: require('../index.js'),
       options: dashboardOptions
     }
   ], () => {
