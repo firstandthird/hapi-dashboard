@@ -10,14 +10,15 @@ tap.beforeEach((allDone) => {
       return allDone(err);
     }
     server = hapiServer;
-    allDone();
+    return allDone();
   });
 });
 
 tap.afterEach((done) => {
-  server.stop(done);
+  server.stop(() => {
+    done();
+  });
 });
-
 tap.test('can configure and call the dashboards menu endpoint', (t) => {
   t.plan(2);
   server.inject({
@@ -32,14 +33,13 @@ tap.test('can configure and call the dashboards menu endpoint', (t) => {
 });
 
 tap.test('enables individual dashboards endpoint', (t) => {
-  t.plan(2);
   server.inject({
     url: '/users',
     method: 'GET'
   }, (response) => {
     t.equal(response.statusCode, 200, 'dashboard endpoint returns HTTP OK');
     const expectedOutput = fs.readFileSync('test/expectedOutputs/users.html').toString();
-    t.equal(response.result, expectedOutput);
+    t.equal(response.result, expectedOutput, 'sends back the correct HTML interface');
     t.end();
   });
 });

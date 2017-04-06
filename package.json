@@ -10,6 +10,7 @@
     "url": "https://github.com/firstandthird/hapi-dashboard.git"
   },
   "scripts": {
+    "test": "tap test/test.*.js | tap-spec",
     "start": "nodemon example/server.js"
   },
   "dependencies": {
