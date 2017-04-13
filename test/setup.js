@@ -1,7 +1,7 @@
 'use strict';
 const Hapi = require('hapi');
 const path = require('path');
-module.exports = (options, allDone) => {
+module.exports = (passedOptions, allDone) => {
   const server = new Hapi.Server({
     debug: {
       request: ['*'],
@@ -9,13 +9,12 @@ module.exports = (options, allDone) => {
     }
   });
   server.connection({ port: 8080 });
+  const options = Object.keys(passedOptions).length > 0 ? passedOptions : { path: path.join(__dirname, 'dashboardOptions.js') };
   server.register([
     require('vision'),
     {
       register: require('../'),
-      options: {
-        path: path.join(__dirname, 'dashboardOptions.js')
-      }
+      options
     }
   ], () => {
     server.start((err) => allDone(err, server));
